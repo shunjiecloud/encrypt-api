@@ -1,0 +1,52 @@
+{
+    "swagger": "2.0",
+    "info": {
+        "description": "瞬捷云 encrypt-api",
+        "title": "瞬捷云加解密服务",
+        "termsOfService": "https://www.shunjiecloud.com",
+        "contact": {
+            "name": "zhoushengjie",
+            "url": "https://www.shunjiecloud.com",
+            "email": "zhou_shengjie@outlook.com"
+        },
+        "license": {
+            "name": "MIT",
+            "url": "https://opensource.org/licenses/MIT"
+        },
+        "version": "1.0"
+    },
+    "host": "api.shunjiecloud.com",
+    "basePath": "/",
+    "paths": {
+        "/encrypt/v1/publickey": {
+            "get": {
+                "description": "获取公钥。",
+                "produces": [
+                    "application/json"
+                ],
+                "tags": [
+                    "encrypt"
+                ],
+                "summary": "获取公钥",
+                "responses": {
+                    "200": {
+                        "description": "ok",
+                        "schema": {
+                            "$ref": "#/definitions/schemas.GetPublicKeyResponse"
+                        }
+                    }
+                }
+            }
+        }
+    },
+    "definitions": {
+        "schemas.GetPublicKeyResponse": {
+            "type": "object",
+            "properties": {
+                "public_key": {
+                    "type": "string"
+                }
+            }
+        }
+    }
+}

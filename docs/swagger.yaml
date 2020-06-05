@@ -1,0 +1,35 @@
+basePath: /
+definitions:
+  schemas.GetPublicKeyResponse:
+    properties:
+      public_key:
+        type: string
+    type: object
+host: api.shunjiecloud.com
+info:
+  contact:
+    email: zhou_shengjie@outlook.com
+    name: zhoushengjie
+    url: https://www.shunjiecloud.com
+  description: 瞬捷云 encrypt-api
+  license:
+    name: MIT
+    url: https://opensource.org/licenses/MIT
+  termsOfService: https://www.shunjiecloud.com
+  title: 瞬捷云加解密服务
+  version: "1.0"
+paths:
+  /encrypt/v1/publickey:
+    get:
+      description: 获取公钥。
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: ok
+          schema:
+            $ref: '#/definitions/schemas.GetPublicKeyResponse'
+      summary: 获取公钥
+      tags:
+      - encrypt
+swagger: "2.0"
