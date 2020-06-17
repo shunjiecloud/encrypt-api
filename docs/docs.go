@@ -58,6 +58,9 @@ var doc = `{
         "schemas.GetPublicKeyResponse": {
             "type": "object",
             "properties": {
+                "id": {
+                    "type": "integer"
+                },
                 "public_key": {
                     "type": "string"
                 }

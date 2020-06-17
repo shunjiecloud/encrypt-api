@@ -2,6 +2,8 @@ basePath: /
 definitions:
   schemas.GetPublicKeyResponse:
     properties:
+      id:
+        type: integer
       public_key:
         type: string
     type: object

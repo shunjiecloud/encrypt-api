@@ -15,7 +15,7 @@ import (
 // @tags encrypt
 // @Description 获取公钥。
 // @Produce  json
-// @Success 200 {object} schemas.GetPublicKeyResponse string	"ok"
+// @Success 200 {object} schemas.GetPublicKeyResponse "ok"
 // @Router /encrypt/v1/publickey [get]
 func GetPublicKey(c *gin.Context) {
 	//  ctx
