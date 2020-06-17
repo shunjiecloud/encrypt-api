@@ -30,5 +30,6 @@ func GetPublicKey(c *gin.Context) {
 	}
 	var ret schemas.GetPublicKeyResponse
 	ret.PublicKey = getPublicKeyResp.PublicKey
+	ret.Id = getPublicKeyResp.Id
 	appCtx.WriteJson(200, &ret)
 }
